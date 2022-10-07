@@ -1,0 +1,126 @@
+
+.table {
+	width: 100%;
+    margin-top: 30px;
+    margin-bottom: 102px;
+	border-collapse: collapse; 
+
+    th {
+        text-align: left;
+        font-weight: bold;
+        padding: 10px 20px;
+        padding-left: 40px;
+        background: #efefef;
+    }
+
+    td {
+        border-bottom: 1px solid #dddddd;
+        padding: 7px 20px;
+        padding-left: 33px;
+    }
+}
+
+.rub {
+    text-align: right;
+
+    &::after {
+        content: '₽';
+        margin-left: 2px;
+    }
+}
+
+.length::after {
+    content: 'мм';
+    margin-left: 2px;
+}
+
+.price {
+    padding-left: 0px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: grid;
+    }
+
+    .other__cell {
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+        align-items: center;
+
+        &_name {
+            padding-left: 10px;
+        }
+    }
+    
+    .price__cell {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    table {
+        border: 0;
+
+        thead {
+            display: none;
+        }
+
+        tr {
+            margin-bottom: 16px;
+            display: block;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+
+            .button {
+                margin: 0px;
+            }
+        }
+
+        td {
+            display: block;
+            text-align: right;
+            font-size: 13px;
+            border: 0;
+
+            &:last-child {
+                border-bottom: 0;
+            }
+
+            &::before {
+                flex-grow: 0;
+                background-color: #F5F5F7;
+                width: 80px;
+                text-align: left;
+                content: attr(data-label);
+                float: left;
+                padding: 10px;
+                padding-left: 10px;
+                font-weight: bold;
+            }
+        }
+
+
+    }
+    
+    .table td {
+        margin: 0px auto;
+        width: 95%;
+        height: 56px;
+        padding: 0px;
+    }
+
+    .rub,
+    .length {
+        margin-left: 10px;
+        flex-grow: 0;
+    }
+}

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+	<html lang="@@lang">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, initial-scale=1.0">
+	<meta name="description"
+				content="@@description">
+	<meta name="keywords"
+				content="@@keywords">
+	<link rel="shortcut icon"
+				href="@@favicon.svg"
+				type="image/svg+xml">
+	<link rel="shortcut icon"
+				href="@@favicon.webp"
+				type="image/webp">
+	<link rel="shortcut icon"
+				href="@@favicon.png"
+				type="image/x-icon">
+                <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://snipp.ru/cdn/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick-theme.css"/>
+
+	<link rel="stylesheet"
+				href="css/libs.min.css">
+	<link rel="stylesheet"
+				href="css/style.min.css">
+	<title>@@title</title>
+</head>
+
+
+<body>
+	<header class="header">
+    <ul class="header__menu">
+        <li><a class="header__link" href="#">Таблица</a></li>
+        <li><a class="header__link" href="#">Форма</a></li>
+        <li><a class="header__link" href="#">Галарея</a></li>
+    </ul>
+</header>
+
+<!-- do breadcrumbs -->
+<nav class="nav"> 
+    <ul class="nav__menu">
+    <li><a class="nav__link" href="#">Главная</a></li>
+</ul>
+</nav>
+	<div class="title"><h1>Тестовое задание</h1></div>
+
+<section class="container section">
+    <h2 class="section__title">Таблица</h2>
+    <p class="section__text">Должна быть адаптивной, без дублирования информации.</p>
+    <table class="table desktop">
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Материал</th>
+                <th>Размер</th>
+                <th class="price">Цена</th>
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Название">Стеновой паркет</td>
+                <td data-label="Материал">Ольха</td>
+                <td data-label="Размер" class="length">13 х 78 х 300</td>
+                <td data-label="Цена" class="rub">52</td>
+                <td><a class="button__basket" href="#">В корзину</a></td>
+            </tr>
+            <tr>
+                <td data-label="Название">Стеновой паркет</td>
+                <td data-label="Материал">Ольха</td>
+                <td data-label="Размер" class="length">13 х 78 х 600</td>
+                <td data-label="Цена" class="rub">112</td>
+                <td><a class="button__basket" href="#">В корзину</a></td>
+            </tr>
+            <tr>
+                <td data-label="Название">Доска для пола, сорт А</td>
+                <td data-label="Материал">Лиственница</td>
+                <td data-label="Размер" class="length">27 х 134 х 2000</td>
+                <td data-label="Цена" class="rub">1062</td>
+                <td><a class="button__basket" href="#">В корзину</a></td>
+            </tr>
+            <tr>
+                <td data-label="Название">Вагонка</td>
+                <td data-label="Материал">Термо-абаш</td>
+                <td data-label="Размер"><span class="length">19 х 90 х 2000</span></td>
+                <td data-label="Цена" class="rub">1009</td>
+                <td><a class="button__basket" href="#">В корзину</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table mobile">
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Материал</th>
+                <th>Размер</th>
+                <th>Цена</th>
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Название" class="other__cell"><div class="other__cell"><span class="other__cell_name">Стеновой паркет</span></div></td>
+                <td data-label="Материал" class="other__cell"><div class="other__cell"><span class="other__cell_name">Ольха</span></div></td>
+                <td data-label="Размер" class="other__cell"><div class="other__cell"><span class="length">13 х 78 х 300</span></div></td>
+                <td data-label="Цена" class="price__cell">
+                    <div class="other__cell "><span class="rub">52</span><a class="button__basket button_transparent" href="#">В корзину</a></div></td>
+                </td>
+                
+            </tr>
+            <tr>
+                <td data-label="Название" class="other__cell"><div class="other__cell"><span class="other__cell_name">Стеновой паркет</span></div></td>
+                <td data-label="Материал" class="other__cell"><div class="other__cell"><span class="other__cell_name">Ольха</span></div></td>
+                <td data-label="Размер" class="other__cell"><div class="other__cell"><span class="length">13 х 78 х 600</span></div></td>
+                <td data-label="Цена" class="price__cell">
+                    <div class="other__cell"><span class="rub">112</span><a class="button__basket button_transparent" href="#">В корзину</a></div></td>
+                </td>
+                
+            </tr>
+            <tr>
+                <td data-label="Название" class="other__cell"><div class="other__cell"><span class="other__cell_name">Доска для пола, сорт А</span></div></td>
+                <td data-label="Материал" class="other__cell"><div class="other__cell"><span class="other__cell_name">Лиственница</span></div></td>
+                <td data-label="Размер" class="other__cell"><div class="other__cell"><span class="length">27 х 134 х 2000</span></div></td>
+                <td data-label="Цена" class="price__cell">
+                    <div class="other__cell"><span class="rub">1062</span><a class="button__basket button_transparent" href="#">В корзину</a></div></td>
+                </td>
+                
+            </tr>
+            <tr>
+                <td data-label="Название" class="other__cell"><div class="other__cell"><span class="other__cell_name">Вагонка</span></div></td>
+                <td data-label="Материал" class="other__cell"><div class="other__cell"><span class="other__cell_name">Термо-абаш</span></div></td>
+                <td data-label="Размер" class="other__cell"><div class="other__cell"><span class="length">19 х 90 х 2000</span></div></td>
+                <td data-label="Цена" class="price__cell">
+                    <div class="other__cell"><span class="rub">1009</span><a class="button__basket button_transparent" href="#">В корзину</a></div></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+	<section class="container order__wrapper">
+    <h2 class="order__wrapper_title">Форма</h2>
+    <p class="order__wrapper_text">Должна иметь проверку полей: обязательное поле, формат, минимальное значение. При несоответствии должна выводиться соответствующая ошибка. Поле «Телефон» должен содержать маску ввода. 
+    </p>
+
+    <form class="order">
+        <h3 class="order__title">Заказать проект</h3>
+        <div class="order__row order__row__name">
+            <div class="field">
+                <label class="field__label" for="name">Название</label>
+                <div class="field__content">
+                    <input class="field__control" name="name" id="name" type="text" required>
+                    <span class="field__indicator indicator">
+                        <svg class="indicator__error" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18M6 6L18 18" stroke="#DC3545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+
+                        <svg class="indicator__success" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                        
+                    </span>
+                </div> 
+            </div>
+        </div>
+
+            <div class="order__row order__row__control">
+                <div class="field">
+                    <label class="field__label" for="price">Стоимость</label>
+                    <div class="control__wrapper">
+                        <div class="field__content">
+                            <input id="price" name="price" type="text" value="">
+                        </div>
+                        <div class="wrapper">
+                            <div id="slider"></div>
+                            <div id="legend"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Площадь</label>
+<div class="field__content">
+<div class="number" data-step="1" data-min="1" data-max="100">
+    <a href="#" class="number-minus"><img src="./img/Vector_5.svg" alt="minus"></a>
+    <input class="number-text" type="text" id="count" name="count" value="1">
+    <a href="#" class="number-plus"><img src="./img/Plus.svg" alt="plus"></a>
+</div>
+</div>
+                </div>
+
+                <div class="field checkbox-mobile">
+                    <label class="field__label" for="trim__field">Отделка</label>
+                        <div class="field__content checkbox">
+                            <label class="checkbox-ios">
+                                <input type="checkbox" id="checkbox" name="checkbox" value="Да">
+                                <span class="checkbox-ios-switch"></span>
+                            </label>
+                        </div>
+                </div>
+            </div>
+
+            <div class="order__row order__row__contacts">
+
+                <div class="field">
+                    <label class="field__label" for="phone">Телефон</label>
+                    <div class="field__content">
+                        <input class="field__control" id="phone" name="phone" type="text" placeholder="+7" required>
+                        <span class="field__indicator indicator">
+                            <svg class="indicator__error" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 6L6 18M6 6L18 18" stroke="#DC3545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                            <svg class="indicator__success" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                            
+                        </span>
+                    </div>
+                 
+                </div>
+
+                <div class="field">
+                    <label class="field__label" for="email">Почта</label>
+                    <div class="field__content">
+                        <input class="field__control" id="email" name="email" type="email" required>
+                        <span class="field__indicator indicator">
+                            <svg class="indicator__error" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 6L6 18M6 6L18 18" stroke="#DC3545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                            <svg class="indicator__success" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order__row order__row__attach">
+                    <label class="field__label" for="attach__form">Приложить файлы</label>
+                    <div class="attach__form">
+                        <p class="attach__title">Кликните или перенесите файлы в эту область. Только JPG, до 1 Мб</p>
+                    </div>
+                    <div class="attach__content attach-content">
+                        <div class="attach-content__item">
+                            <div class="attach-content__delete"><img src="./img/x-close.svg" alt="x"></div>
+                            <div class="attach-content__name">filename-01.jpg</div>
+                            <div class="attach-content__progress"><img src="./img/Line_179.svg" alt="line"></div>
+                        </div>
+
+                    </div>
+            </div>
+
+            <div class="order__row order__row__password-content">
+                <div class="field">
+                    <label class="field__label" for="comfortable">Удобства</label>
+                    <div class="field__content">
+                        <div class="select" id="select">
+                            <div class="select__item select__item_base">
+                                <span class="select__value">
+                                    Любые
+                                </span>
+                                <span class="select__button">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.5 15L12 7.5" stroke="#0066CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.5 15L12 7.5" stroke="#0066CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                </span>
+                            </div>
+
+                            <div class="select__options">
+                                <div class="select__item"><span class="select__value">Кирпичный</span></div>
+                                <div class="select__item"><span class="select__value">Деревянный</span></div>
+                                <div class="select__item"><span class="select__value">Мололитный</span></div>
+                                <div class="select__item"><span class="select__value">Каркасный</span></div>
+                                <div class="select__item"><span class="select__value">Щитовой</span></div>
+                            </div>
+                            <input type="hidden" id="comfortable" name="comfortable">
+                        </div>
+                    </div> 
+                </div>
+                
+                <div class="field">
+                    <label class="field__label" for="password">Пароль</label>
+
+                    <div class="password">
+                        <div class="field__content">
+                            <input class="password" type="password" id="password" name="password">
+                        </div>
+                        <span class="password__button password__button_on">
+                            <img class="eye-off hide" src="./img/eye-off.svg" alt="eye-off">
+                            <svg _ngcontent-ihb-c117="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-on"><path _ngcontent-ihb-c117="" d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle _ngcontent-ihb-c117="" cx="12" cy="12" r="3"></circle></svg>
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="order__row order__row__wishes">
+                <div class="field">
+                    <label class="field__label" for="field__wishes">Пожелания</label>
+                    <div class="field__content">
+                        <input class="field__wishes" type="text">
+                        <div class="tags">
+                        </div>
+                        <input type="hidden" id="tags" name="tags">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="order__row submit">
+                    <button class="order__submit" type="submit">Отправить заявку</button>
+            </div>
+    </form>
+</section>
+	<section class="section">
+    <h2 class="section__title">Галерея</h2>
+        <p class="section_text">Фильтры должны фильтровать изображения без перезагрузки. Адаптивность: между реперными точками — пропорциональное масштабирование, далее уменьшение кол-ва фото в строке. Пролистывание должно быть по 8 фото (страницами) для дектопа, по 4 фото на мобилке. Стрелки появляются только при наведении на блок с фото.  
+        </p>
+        <div class="gallery">
+            <ul class="gallery__menu">
+                <li><a class="button__gallery bath" href="#">Бани</a></li>
+                <li><a class="button__gallery sauna" href="#">Сауны</a></li>
+                <li><a class="button__gallery hammams" href="#">Хаммамы</a></li>
+                <li><a class="button__gallery swim" href="#">Бассейн</a></li>
+            </ul>
+        </div>
+        <!-- Slider main container -->
+
+    </section>
+
+<div class="slider">
+    <div class="slider-wrapper">
+        <div id="slick">
+            <!-- Бани -->
+            <div class="slide-item"><img class="img__slide" src="./img/image_30.jpg" alt="image_30"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_46.jpg" alt="image_46"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_37.jpg" alt="image_37"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_45.jpg" alt="image_45"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_49.jpg" alt="image_49"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_39.jpg" alt="image_39"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_38.jpg" alt="image_38"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_28.jpg" alt="image_28"></div>
+            <!-- Сауны -->
+            <div class="slide-item"><img class="img__slide" src="./img/image_sauna_1.jpg" alt="image_sauna_1"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_sauna_2.jpg" alt="image_46"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_sauna_3.jpg" alt="image_37"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_sauna_4.jpg" alt="image_45"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_49.jpg" alt="image_49"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_39.jpg" alt="image_39"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_38.jpg" alt="image_38"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_28.jpg" alt="image_28"></div>
+            <!-- Хаммамы -->
+            <div class="slide-item"><img class="img__slide" src="./img/image_30.jpg" alt="image_30"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_46.jpg" alt="image_46"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_37.jpg" alt="image_37"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_45.jpg" alt="image_45"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_49.jpg" alt="image_49"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_39.jpg" alt="image_39"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_38.jpg" alt="image_38"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_28.jpg" alt="image_28"></div>
+            <!-- Бассейн -->
+            <div class="slide-item"><img class="img__slide" src="./img/image_30.jpg" alt="image_30"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_46.jpg" alt="image_46"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_37.jpg" alt="image_37"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_45.jpg" alt="image_45"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_49.jpg" alt="image_49"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_39.jpg" alt="image_39"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_38.jpg" alt="image_38"></div>
+            <div class="slide-item"><img class="img__slide" src="./img/image_28.jpg" alt="image_28"></div>
+          </div>
+      </div>
+</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://snipp.ru/cdn/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="./js/main.min.js"></script>
+</body>
+
+</html>
