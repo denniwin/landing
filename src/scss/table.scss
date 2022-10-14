@@ -1,9 +1,43 @@
+.title {
+    max-width: 884px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__text {
+        padding-bottom: 64px;
+    }
+}
 
 .table {
 	width: 100%;
-    margin-top: 30px;
-    margin-bottom: 102px;
 	border-collapse: collapse; 
+
+    &__button {
+        text-align: center;
+        transition: .4s;
+        font-size: 14px;
+        font-weight: 600;
+        display: block;
+        padding: 0 9px;
+        text-decoration: none;
+        color: #0066CC;;
+        line-height: 32px;
+        white-space: nowrap;
+        background: rgba(0, 102, 204, 0.1);
+        border-radius: 4px;
+    
+        &:hover {
+            transition: .4s;
+            color: #fff;
+            background: rgba(0, 102, 204);
+    }
+    
+        &_mr20px {
+            margin-right: 20px;
+        }     
+    }
 
     th {
         text-align: left;
@@ -14,7 +48,7 @@
     }
 
     td {
-        border-bottom: 1px solid #dddddd;
+        border-top: 1px solid #dddddd;
         padding: 7px 20px;
         padding-left: 33px;
     }
@@ -48,7 +82,7 @@
     }
 
     .mobile {
-        display: grid;
+        display: inline-table;
     }
 
     .other__cell {
@@ -77,7 +111,6 @@
         tr {
             margin-bottom: 16px;
             display: block;
-            border-top: 1px solid #ddd;
             border-bottom: 1px solid #ddd;
 
             .button {
@@ -107,20 +140,19 @@
                 font-weight: bold;
             }
         }
-
-
     }
     
-    .table td {
-        margin: 0px auto;
-        width: 95%;
-        height: 56px;
-        padding: 0px;
+    .table {
+
+        td {    
+            margin: 0px auto;
+            padding: 0px;
+        }
     }
 
     .rub,
     .length {
-        margin-left: 10px;
+        padding-left: 10px;
         flex-grow: 0;
     }
 }

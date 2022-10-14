@@ -1,3 +1,9 @@
+var cleave = new Cleave('#price', {
+  delimiter: ' ',
+  numeral: true,
+  numeralThousandsGroupStyle: 'thousand'
+});
+
 //InputMask
 $('#phone').mask('+7 (999) 999-99-99');
 
@@ -15,12 +21,6 @@ $(document).ready(function() {
         required: true,
         minlength: 18
       },
-
-      name: {
-        required: true,
-        minlength: 5,
-        maxlength: 30
-      }
 
     },
     errorPlacement: function(error, element) {   },
@@ -83,10 +83,10 @@ $(document).ready(function() {
 $('#slick').slick({
   rows: 2,
   slidesToShow: 4,
-  slidesToScroll:4,
-  accessibility: false,
+  slidesToScroll: 4,
   adaptiveHeight: true,
-  arrows: false,
+  arrows: true,
+  dots: true,
   responsive: [
     {
         breakpoint: 700,
@@ -99,30 +99,30 @@ $('#slick').slick({
 ]
   });
 
-$('.button__gallery.bath').on('click', function(e){
+$('.gallery__button.bath').on('click', function(e){
   e.preventDefault()
-  $(".button__gallery").removeClass("active");
+  $(".gallery__button").removeClass("active");
   $(this).addClass('active')
   $('#slick').slick("slickGoTo", 1);
   });
 
-$('.button__gallery.sauna').on('click', function(e){
+$('.gallery__button.sauna').on('click', function(e){
   e.preventDefault()
-  $(".button__gallery").removeClass("active");
+  $(".gallery__button").removeClass("active");
   $(this).addClass('active')
   $('#slick').slick("slickGoTo", 5);
   });
 
-$('.button__gallery.hammams').on('click', function(e){
+$('.gallery__button.hammams').on('click', function(e){
   e.preventDefault()
-  $(".button__gallery").removeClass("active");
+  $(".gallery__button").removeClass("active");
   $(this).addClass('active')
   $('#slick').slick("slickGoTo", 9);
   });
 
-$('.button__gallery.swim').on('click', function(e){
+$('.gallery__button.swim').on('click', function(e){
   e.preventDefault()
-  $(".button__gallery").removeClass("active");
+  $(".gallery__button").removeClass("active");
   $(this).addClass('active')
   $('#slick').slick("slickGoTo", 13);
   });
@@ -196,18 +196,18 @@ $.each(items, function(key,value){
   })
 
 //Show-hide icon password
-  $('body').on('click', '.password__button', function(){
-    $passwordField = $('.password__field').attr('type')
-    if ($passwordField === 'password') {
-      $('.password__field').attr('type', 'text')
-      $('.eye-off').hide(200)
-      $('.eye-on').show(200)
-    } else {
-      $('.password__field').attr('type', 'password')
-      $('.eye-off').show(200)
-      $('.eye-on').hide(200)
-    }
-  })
+$('body').on('click', '.password__button', function(){
+  $passwordField = $('.password__field').attr('type')
+  if ($passwordField === 'password') {
+    $('.password__field').attr('type', 'text')
+    $('.eye-off').show(200)
+    $('.eye-on').hide(200)
+  } else {
+    $('.password__field').attr('type', 'password')
+    $('.eye-off').hide(200)
+    $('.eye-on').show(200)
+  }
+})
 
 //Create array for post
   $('.field__wishes').on('input', function(){
@@ -227,7 +227,7 @@ $.each(items, function(key,value){
   })
 
 //In basket
-$('.button__basket').click(function(e){
+$('.table__button').click(function(e){
   e.preventDefault()
   $('html').animate({
     scrollTop: $('.order').offset().top + 50
