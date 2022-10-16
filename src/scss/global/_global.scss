@@ -6,6 +6,7 @@
 
 html, body {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 
@@ -67,9 +68,9 @@ input {
 
 .section {
     max-width: 884px;
+    padding-bottom: 64px;
     margin: 0 auto;
-    padding: 0 16px;
-
+    
     &__text {
         padding-bottom: 56px;
     }
@@ -90,7 +91,6 @@ input {
 
 h1 {
     padding-left: 0px;
-    font-weight: 700;
     font-size: 48px;
     line-height: 48px;
     text-align: center;

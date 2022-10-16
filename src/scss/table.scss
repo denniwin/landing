@@ -43,15 +43,23 @@
         text-align: left;
         font-weight: bold;
         padding: 10px 20px;
-        padding-left: 40px;
+        padding-left: 30px;
         background: #efefef;
     }
 
+    tr {
+        border-bottom: 1px solid #ddd;
+    }
+
     td {
-        border-top: 1px solid #dddddd;
         padding: 7px 20px;
         padding-left: 33px;
+
+        &:last-child {
+            padding-right: 10px;
+        }
     }
+    
 }
 
 .rub {
@@ -73,17 +81,14 @@
     font-size: 16px;
     line-height: 24px;
     text-align: center;
+
+    &__cell {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 @media (max-width: 600px) {
-
-    .desktop {
-        display: none;
-    }
-
-    .mobile {
-        display: inline-table;
-    }
 
     .other__cell {
         display: flex;
@@ -98,6 +103,8 @@
     
     .price__cell {
         display: flex;
+        align-content: center;
+        align-items: center;
         justify-content: space-between;
     }
     
@@ -111,7 +118,7 @@
         tr {
             margin-bottom: 16px;
             display: block;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 2px solid #ddd;
 
             .button {
                 margin: 0px;
@@ -147,6 +154,13 @@
         td {    
             margin: 0px auto;
             padding: 0px;
+        }
+
+            &__button {
+        
+            &_mr20px {
+                margin-right: 20px;
+            }     
         }
     }
 

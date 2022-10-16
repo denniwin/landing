@@ -1,8 +1,7 @@
 .gallery {
 
-    max-width: calc(100% - 128px);
+    max-width: calc(100% - 24px);
     margin: 0 auto;
-    padding: 0 16px;
 
     &__header {
         position: relative;
@@ -59,8 +58,6 @@
             background: rgba(0, 102, 204);
     }    
     }
-
-    
 
     .slider {
     
@@ -186,7 +183,6 @@
 }
 
     .slide-item {
-        padding-right: 24px;
     
         &__image {
             display: block;

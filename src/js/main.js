@@ -89,6 +89,7 @@ $('#slick').slick({
   adaptiveHeight: true,
   arrows: true,
   dots: true,
+
   appendDots:$(".gallery__footer"),
   responsive: [
     {
