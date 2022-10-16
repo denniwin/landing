@@ -1,11 +1,14 @@
+
+//InputMask
+$('#phone').mask('+7 (999) 999-99-99');
+
 var cleave = new Cleave('#price', {
   delimiter: ' ',
   numeral: true,
   numeralThousandsGroupStyle: 'thousand'
 });
 
-//InputMask
-$('#phone').mask('+7 (999) 999-99-99');
+
 
 //Validate Email, Number
 $(document).ready(function() {
@@ -48,7 +51,6 @@ $(".order").on("submit", function(){
   
 });
 
-
 //Checkbox 
 $(window).keyup(function(e){
 	var target = $('.checkbox-ios input:focus');
@@ -87,6 +89,7 @@ $('#slick').slick({
   adaptiveHeight: true,
   arrows: true,
   dots: true,
+  appendDots:$(".gallery__footer"),
   responsive: [
     {
         breakpoint: 700,
@@ -101,50 +104,50 @@ $('#slick').slick({
 
 $('.gallery__button.bath').on('click', function(e){
   e.preventDefault()
-  $(".gallery__button").removeClass("active");
-  $(this).addClass('active')
+  $(".gallery__button").removeClass("slick-active");
+  $(this).addClass('slick-active')
   $('#slick').slick("slickGoTo", 1);
   });
 
 $('.gallery__button.sauna').on('click', function(e){
   e.preventDefault()
-  $(".gallery__button").removeClass("active");
-  $(this).addClass('active')
+  $(".gallery__button").removeClass("slick-active");
+  $(this).addClass('slick-active')
   $('#slick').slick("slickGoTo", 5);
   });
 
 $('.gallery__button.hammams').on('click', function(e){
   e.preventDefault()
-  $(".gallery__button").removeClass("active");
-  $(this).addClass('active')
+  $(".gallery__button").removeClass("slick-active");
+  $(this).addClass('slick-active')
   $('#slick').slick("slickGoTo", 9);
   });
 
 $('.gallery__button.swim').on('click', function(e){
   e.preventDefault()
-  $(".gallery__button").removeClass("active");
-  $(this).addClass('active')
+  $(".gallery__button").removeClass("slick-active");
+  $(this).addClass('slick-active')
   $('#slick').slick("slickGoTo", 13);
   });
 
 
-function filteredSlick (filteredClass, slickName) {
-  $(slickName).slick('unslick');
-  $(slickName).find('.slide-item').each(function(e){ 
-    if ($(this).attr('data-set') !== filteredClass) {
-      $(this).addClass('hide')
-    } 
-  }
-  )
-  $(slickName).slick({
-    rows: 2,
-    slidesToShow: 4,
-    });
-}
+// function filteredSlick (filteredClass, slickName) {
+//   $(slickName).slick('unslick');
+//   $(slickName).find('.slide-item').each(function(e){ 
+//     if ($(this).attr('data-set') !== filteredClass) {
+//       $(this).addClass('hide')
+//     } 
+//   }
+//   )
+//   $(slickName).slick({
+//     rows: 2,
+//     slidesToShow: 4,
+//     });
+// }
 
 //Slider for input
   $(function(){
-    $('#slider').slider({
+    $('.slider_under-price').slider({
       min: 0,
       max: 4000000,
       value: 0,
@@ -157,7 +160,7 @@ function filteredSlick (filteredClass, slickName) {
 
 //label for slider
   var items = ['10','20','30','40+'];
-  var s = $("#slider");
+  var s = $(".slider_under-price");
 
   s.slider({
     min:1,
@@ -170,7 +173,7 @@ $.each(items, function(key,value){
   var w = oneBig;
   if(key === 0 || key === items.length-1)
     w = oneBig/2;
-  $("#legend").append(`<label class="legend__label" style='width: ${w}%'>${value}</label>`);
+  $(".legend").append(`<label class="legend__label" style='width: ${w}%'>${value}</label>`);
 });
 
 //Show select menu
@@ -210,7 +213,7 @@ $('body').on('click', '.password__button', function(){
 })
 
 //Create array for post
-  $('.field__wishes').on('input', function(){
+  $('#wishes').on('input', function(){
     $value = $(this).val().split(' ')
     if ($value.length > 1 ) {
       $(this).val('')
@@ -222,7 +225,7 @@ $('body').on('click', '.password__button', function(){
         $('#tags').val(result)
         console.log($('#tags').val())
       })
-      $('.tags').append(`<div class="tags__item"><span class="tags__value">${$value[0]}</span><span class="tags__delete"><img src="./images/Icon_delete.svg" alt="Icon_delete"></span></div>`)
+      $('.tags').append(`<div class="tags__item"><span class="tags__value">${$value[0]}</span><span class="tags__delete"><img src="./img/Icon_delete.svg" alt="Icon_delete"></span></div>`)
     }
   })
 
@@ -243,7 +246,7 @@ $('.table__button').click(function(e){
 
 //Delete tags
   $(document).on('click','.tags__delete', (function(){
-    $(this).parent().fadeOut (300, function() {
+    $(this).parent().fadeOut (200, function() {
     $(this).remove()
   })
   }))

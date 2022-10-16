@@ -166,8 +166,8 @@
                         <div class="field__content">
                             <input id="price" class="price" name="price" type="text">
                         <div class="wrapper">
-                            <div id="slider"></div>
-                            <div id="legend"></div>
+                            <div class="slider_under-price"></div>
+                            <div class="legend"></div>
                         </div>
                     </div>
                 </div>
@@ -303,7 +303,7 @@
                 <div class="field">
                     <label class="field__label">Пожелания</label>
                     <div class="field__content">
-                        <input class="field__control" type="text" placeholder="укажите через запятую">
+                        <input class="field__control" id="wishes" type="text" placeholder="укажите через запятую">
                         <div class="tags">
                         </div>
                         <input type="hidden" id="tags" name="tags">
@@ -317,11 +317,12 @@
             </div>
     </form>
 </section>
-	<section class="section">
+	
+.<section class="gallery">
     <h2 class="section__title">Галерея</h2>
         <p class="section__text">Фильтры должны фильтровать изображения без перезагрузки. Адаптивность: между реперными точками — пропорциональное масштабирование, далее уменьшение кол-ва фото в строке. Пролистывание должно быть по 8 фото (страницами) для дектопа, по 4 фото на мобилке. Стрелки появляются только при наведении на блок с фото.  
         </p>
-        <div class="gallery">
+        <div class="gallery__header">
             <ul class="gallery__menu">
                 <li><a class="gallery__button bath" href="#">Бани</a></li>
                 <li><a class="gallery__button sauna" href="#">Сауны</a></li>
@@ -329,118 +330,123 @@
                 <li><a class="gallery__button swim" href="#">Бассейн</a></li>
             </ul>
         </div>
+
+        <div class="slider">
+            <div class="slider-wrapper">
+                <div id="slick">
+                    <!-- Бани -->
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_bath_1.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_bath_2.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_bath_3.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_bath_4.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_bath_1.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_bath_2.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_bath_3.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_bath_4.jpg);"></span>
+                    </div>
+        
+                    
+                    <!-- Сауны -->
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_sauna_1.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_sauna_2.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_sauna_3.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_sauna_4.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_sauna_1.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_sauna_2.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_sauna_3.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_sauna_4.jpg);"></span>
+                    </div>
+        
+                    <!-- Хаммамы -->
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_hammam_1.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_hammam_2.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_hammam_3.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_hammam_3.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_hammam_1.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_hammam_2.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_hammam_3.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_hammam_3.jpg);"></span>
+                    </div>
+        
+                    <!-- Бассейн -->
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_bath_1.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_bath_2.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_sauna_1.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_sauna_2.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_hammam_1.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_hammam_2.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_bath_1.jpg);"></span>
+                    </div>
+                    <div class="slide-item">
+                        <span class="slide-item__image" style="background-image: url(./img/image_bath_1.jpg);"></span>
+                    </div>
+                  </div>
+              </div>
+        </div>
+        
+        <div class="gallery__footer"></div>
+
     </section>
 
-<div class="slider">
-    <div class="slider-wrapper">
-        <div id="slick">
-            <!-- Бани -->
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_bath_1.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_bath_2.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_bath_3.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_bath_4.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_bath_1.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_bath_2.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_bath_3.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_bath_4.jpg);"></span>
-            </div>
 
-            
-            <!-- Сауны -->
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_sauna_1.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_sauna_2.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_sauna_3.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_sauna_4.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_sauna_1.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_sauna_2.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_sauna_3.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_sauna_4.jpg);"></span>
-            </div>
-
-            <!-- Хаммамы -->
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_hammam_1.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_hammam_2.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_hammam_3.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_hammam_3.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_hammam_1.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_hammam_2.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_hammam_3.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_hammam_3.jpg);"></span>
-            </div>
-
-            <!-- Бассейн -->
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_bath_1.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_bath_2.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_sauna_1.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_sauna_2.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_hammam_1.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_hammam_2.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_bath_1.jpg);"></span>
-            </div>
-            <div class="slide-item">
-                <span class="slide-item__image" style="background-image: url(./img/image_bath_1.jpg);"></span>
-            </div>
-          </div>
-      </div>
-</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://snipp.ru/cdn/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>

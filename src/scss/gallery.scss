@@ -1,9 +1,36 @@
 .gallery {
-    padding-bottom: 66px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
+    max-width: calc(100% - 128px);
+    margin: 0 auto;
+    padding: 0 16px;
+
+    &__header {
+        position: relative;
+        padding-bottom: 66px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__button {
+            text-align: center;
+            transition: .4s;
+            font-size: 16px;
+            display: block;
+            padding: 4px 16px;
+            text-decoration: none;
+            color: #333333;
+            line-height: 32px;
+            white-space: nowrap;
+            background: #F2F4F7;
+            border-radius: 10px;
+            
+                &:hover {
+                transition: .4s;
+                color: #fff;
+                background: rgba(0, 102, 204);
+        }    
+        }
+    }
     &__menu {
         display: flex;
         gap: 8px;
@@ -12,7 +39,7 @@
         margin: 0;
         padding: 0;
         }
-
+    
     &__button {
         text-align: center;
         transition: .4s;
@@ -32,6 +59,22 @@
             background: rgba(0, 102, 204);
     }    
     }
+
+    
+
+    .slider {
+    
+        .slider-wrapper {
+    
+            &:hover {
+    
+                .slick-arrow {
+                    transition: .3s;
+                    opacity: 1;
+        }
+            }
+        }
+    }
 }
 
 .active {
@@ -40,29 +83,11 @@
     background: rgba(0, 102, 204);
 }
 
-.slider {
-    margin: 0 auto;
-    max-width: calc(100% - 128px);
-    position: relative;
-    padding: 0px 60px;
-
-    .slider-wrapper {
-
-        &:hover {
-
-            .slick-arrow {
-                transition: .3s;
-                opacity: 1;
-    }
-        }
-    }
-}
-
 .slick-arrow {
     opacity: .1;
     transition: .4s;
     position: absolute;
-    top: calc(50% - 66px);
+    top: calc(50% - 49px);
     z-index: 2;
     font-size: 0;
     width: 80px;
@@ -73,14 +98,21 @@
 }
 
 .slick-dots {
-    display: flex;
-    gap: 16px;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    
+        display: flex;
+        gap: 16px;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
     li {
         list-style-type: none;
+    }
+
+    .slick-active {
+        
+        button {
+            background-color: #333333;
+        }
     }
 
     button {
@@ -137,8 +169,6 @@
         height: 150px;
     }
 }
-
-
 
 @media (max-width: 768px) {
     .gallery {

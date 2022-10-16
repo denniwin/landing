@@ -3,6 +3,7 @@
     &_text {
         padding-bottom: 64px;
     }
+}
 
     .order {
         padding: 96px;
@@ -59,7 +60,6 @@
             }
         }
     }
-}
 
 .field {
 
@@ -107,21 +107,6 @@
 
     &__control.field__control_valid + &__indicator .indicator__success {
         display: block;
-    }
-
-}
-
-.legend__label {
-    font-size: 12px;
-    display: inline-block;
-    text-align: center;
-
-    &:first-child {
-        text-align:left;
-    }
-
-    &:last-child {
-        text-align:right;
     }
 }
 
@@ -190,10 +175,6 @@
         }
     }
     
-
-
-
-
     .checkbox-ios input[type=checkbox]:checked + .checkbox-ios-switch:before {
         transform: translateX(20px);
     }
@@ -223,8 +204,8 @@
         position: relative;
         min-width: 224px;
         height: 56px;
-
-    .number-minus, .number-plus {
+    
+    &-minus {
         transition: .3s;
         position: absolute;
         top: 0;
@@ -237,12 +218,8 @@
         font-size: 20px;
         font-weight: 600;
         text-align: center;
-        font-family: arial;
         color: var(--primary);
         text-decoration: none;
-    }
-    
-    .number-minus {
         padding-top: 5px;
         left: 0;
         border-top-left-radius: 4px;
@@ -270,7 +247,21 @@
             }
     }
     
-    .number-plus {
+    &-plus {
+        transition: .3s;
+        position: absolute;
+        top: 0;
+        width: 56px;
+        height: 56px;
+        line-height: 32px;
+        display: block;
+        padding: 13px;
+        background: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        color: var(--primary);
+        text-decoration: none;
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
         right: 0;
@@ -296,8 +287,8 @@
             }
 }
     }
-    
-    .number-text {
+
+    &-text {
         border-radius: 4px;
         display: inline-block;
         font-size: 16px;
@@ -313,6 +304,7 @@
         min-width: 112px;
         text-align: center;
     }
+    
 }
 
 .attach {
@@ -353,43 +345,49 @@
     width: 100%;
 	margin: 0 auto;
     bottom: -33px;
+    text-align: center;
 
-    .ui-slider .ui-slider-handle {
-        margin-top: -3px;
-        margin-left: -8px;
-        outline: none;
-        position: absolute;
-        z-index: 2;
-        border-radius: 50%;
-        width: 16px;
-        height: 16px;
-        cursor: pointer;
-        -ms-touch-action: none;
-        touch-action: none;
-        }
-    
-    .ui-slider-horizontal {
-        height: 0;
-        }
-    
-    .ui-widget.ui-widget-content {
-        border: 0px solid #c5c5c5;
-        }
+    .legend {
 
-    #legend {
         &__label {
+            font-size: 12px;
             display: inline-block;
-            text-align:center;
-    
+            text-align: center;
+        
             &:first-child {
                 text-align:left;
             }
-    
+        
             &:last-child {
                 text-align:right;
             }
         }
     }
+
+    .ui-slider {
+
+        &-handle {
+            margin-top: -3px;
+            margin-left: -8px;
+            outline: none;
+            position: absolute;
+            z-index: 2;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            -ms-touch-action: none;
+            touch-action: none;
+            }
+
+        &-horizontal {
+            height: 0;
+            }
+    }
+    
+    .ui-widget.ui-widget-content {
+        border: 0px solid #c5c5c5;
+        }
 }
 
 .select {
@@ -404,7 +402,13 @@
         position: relative;
         padding: 16px;
         line-height: 24px;
-        border-bottom: 1px solid #E1E1E1;
+        border: 1px solid #E1E1E1;
+        border-width: 0px 1px 1px;
+
+        &:hover {
+            background-color: #f7f6f6;
+            color: #0066CC;
+        }
 
         &.select__item_base {
             border: 1px solid #E1E1E1;
@@ -420,6 +424,14 @@
         position: absolute;
         display: none;
         width: 100%;
+
+        .select__item {
+
+            &:hover {
+                background-color: #f7f6f6;
+                color: #0066CC;
+            }
+        }
     }
 
     &__button {
@@ -435,58 +447,21 @@
     }
 }
 
-.select_open .select__options{
-    display: block;
-    z-index: 5;
-}
+.select_open {
 
-.select_open .select__button{
-    transform: rotate(180deg);
-}
+    .select__options{
+        display: block;
+        z-index: 5;
+    }
 
-.select_open .select__item.select__item_base{
-border-radius: 4px 4px 0 0;
-}
+    .select__button{
+        transform: rotate(180deg);
+    }
 
-.select__options .select__item:hover{
-    color: #0066CC;
-}
+    .select__item.select__item_base{
+        border-radius: 4px 4px 0 0;
+        }
 
-.select__item.select__item_base{
-    border: 1px solid #E1E1E1;
-    border-radius: 4px;
-}
-
-.select__options{
-    position: absolute;
-    display: none;
-    width: 100%;
-}
-
-.select__options .select__item{
-    border: 1px solid #E1E1E1;
-    border-width: 0px 1px 1px;
-}
-
-.select__options .select__item:last-child{
-    border-radius: 0 0 4px 4px;
-
-} 
-
-.select_open .select__options{
-    display: block;
-}
-
-.select_open .select__button{
-    transform: rotate(180deg);
-}
-
-.select_open .select__item.select__item_base{
-    border-radius: 4px 4px 0 0;
-}
-
-.select__options .select__item:hover{
-    color: #0066CC;
 }
 
 .password {
@@ -506,7 +481,7 @@ border-radius: 4px 4px 0 0;
 }
 
 .tags {
-    padding-bottom: 16px;
+    padding-top: 16px;
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
@@ -533,23 +508,14 @@ border-radius: 4px 4px 0 0;
     }
 }
 
-.slider__container {
-    margin: 0 auto;
-    max-width: calc(100% - 128px);
-}
-
 .mobile {
     display: none;
 }
 
 @media (max-width: 768px) {
 
-.order-wrapper {
-
     .order {
         padding: 41px 32px;
-        margin: 0 auto;
-        background: #F5F5F5;
         border-radius: 0;
         max-width: 842px;
     
@@ -606,21 +572,14 @@ border-radius: 4px 4px 0 0;
     }
 }
 
-.price,
-.wrapper {
-    width: 100%;
-    text-align: center;
-}
-
 .number {
     width: 100%;
     display: flex;
 
-    .number-text {
+    &-text {
         display: block;
         max-width: 100%;
         margin: 0;
-    }
-    
+    } 
 }
-}
+
