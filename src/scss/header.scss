@@ -15,24 +15,22 @@
         margin: 0;
         padding: 0;
 
-        li {
-            .header__link {
-                font-family: 'Gilroy Medium', sans-serif;
-                transition: .4s;
-                color: #333333;
-                text-decoration:none; 
-                display: inline-block; 
-        
-                &:hover {
-                    transition: .4s;
-                    color: #0066CC; 
-                }
-            }
+    &__link {
+        font-family: 'Gilroy Medium', sans-serif;
+        transition: .4s;
+        color: #333333;
+        text-decoration:none; 
+        display: inline-block; 
+
+        &:hover {
+            transition: .4s;
+            color: #0066CC; 
         }
+    }
     } 
 }
 
-.nav {
+.breadcrumb {
     max-width: 884px;
     padding-top: 75px;
     margin: 0 auto;
@@ -47,35 +45,30 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
+    }
 
-        li {
-            .nav__link {
-                font-family: 'Gilroy Regular', sans-serif;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 16px;
+    &__link {
+        font-family: 'Gilroy Regular', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        transition: .4s;
+        color: #333333;
+        text-decoration:none; 
+        display: inline-block; 
+
+            &:hover {
                 transition: .4s;
-                color: #333333;
-                text-decoration:none; 
-                display: inline-block; 
-        
-                &:hover {
-                    transition: .4s;
-                    color: #0066CC;
-                }
-        
-                &::after {
-                    content: '/';
-                    margin-left: 5px;
-                }
+                color: #0066CC;
             }
-        }
+
+            &::after {
+                content: '/';
+                margin-left: 5px;
+            }
     }
 }
-
-
-
 
 
 

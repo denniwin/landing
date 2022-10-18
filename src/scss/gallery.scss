@@ -1,35 +1,12 @@
 .gallery {
-
-    max-width: calc(100% - 24px);
-    margin: 0 auto;
-
     &__header {
         position: relative;
         padding-bottom: 66px;
         display: flex;
         align-items: center;
         justify-content: center;
-
-        &__button {
-            text-align: center;
-            transition: .4s;
-            font-size: 16px;
-            display: block;
-            padding: 4px 16px;
-            text-decoration: none;
-            color: #333333;
-            line-height: 32px;
-            white-space: nowrap;
-            background: #F2F4F7;
-            border-radius: 10px;
-            
-                &:hover {
-                transition: .4s;
-                color: #fff;
-                background: rgba(0, 102, 204);
-        }    
-        }
     }
+
     &__menu {
         display: flex;
         gap: 8px;
@@ -38,7 +15,7 @@
         margin: 0;
         padding: 0;
         }
-    
+
     &__button {
         text-align: center;
         transition: .4s;
@@ -56,139 +33,136 @@
             transition: .4s;
             color: #fff;
             background: rgba(0, 102, 204);
-    }    
+                }    
     }
 
-    .slider {
-    
-        .slider-wrapper {
-    
-            &:hover {
-    
-                .slick-arrow {
-                    transition: .3s;
-                    opacity: 1;
-        }
+    &__active {
+        transition: .4s;
+        color: #fff;
+        background: rgba(0, 102, 204);
+    }
+}
+
+.slider {
+    max-width: calc(100% - 64px);
+    margin: 0 auto;
+    margin-right: 24px;
+
+        &__item {
+            padding-right: 24px;
+        
+            &:first-child {
+                margin-bottom: 24px;
             }
         }
+
+        &__image {
+            display: block;
+            background-position: center;
+            background-size: cover;
+            height: 150px;
+        }
+
+        .slick-arrow {
+            opacity: .1;
+            transition: .4s;
+            position: absolute;
+            top: calc(50% - 49px);
+            z-index: 2;
+            font-size: 0;
+            width: 80px;
+            height: 80px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        
+    &:hover {
+        .slick-arrow {
+            transition: .3s;
+            opacity: 1;
     }
 }
 
-.active {
-    transition: .4s;
-    color: #fff;
-    background: rgba(0, 102, 204);
+    .slick-prev {
+        transition: .4s;
+        left: 0;
+        background: url('../img/arrow-prev.svg') 0 0 / 100% no-repeat;
+
+        &:hover {
+            background: url('../img/arrow-prev_hover.svg') 0 0 / 100% no-repeat;   
+        }
+    }
+
+    .slick-next {
+        transition: .4s;
+        right: 24px;
+        background: url('../img/arrow-next.svg') 0 0 / 100% no-repeat;
+    
+        &:hover {
+            background: url('../img/arrow-next_hover.svg') 0 0 / 100% no-repeat;   
+        }
+    }
+
+    .slick-slide {
+        line-height: 0;
+    }
 }
 
-.slick-arrow {
-    opacity: .1;
-    transition: .4s;
-    position: absolute;
-    top: calc(50% - 49px);
-    z-index: 2;
-    font-size: 0;
-    width: 80px;
-    height: 80px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
-.slick-dots {
+.gallery__footer {
+        
+    .slick-dots {
         display: flex;
         gap: 16px;
         align-content: center;
         justify-content: center;
         align-items: center;
 
-    li {
-        list-style-type: none;
-    }
-
-    .slick-active {
-        
         button {
-            background-color: #333333;
+            cursor: pointer;
+            padding-left: 16px;
+            border: none;
+            font-size: 0;
+            background-color: #06c;
+            border-radius: 50%;
+            height: 16px;
+            width: 16px;
+    
+            &:hover {
+                opacity: .6;
+            }
         }
-    }
+}
 
+.slick-active {
     button {
-        cursor: pointer;
-        padding-left: 16px;
-        border: none;
-        font-size: 0;
-        background-color: #06c;
-        border-radius: 50%;
-        height: 16px;
-        width: 16px;
+        background-color: #333333;
+    }
+}
+}
 
-        &:hover {
-            opacity: .6;
-        }
+@media (max-width: 768px) {
+
+.gallery {
+    &__button {
+        font-size: 14px;
+        display: block;
+        padding: 4px 12px;
     }
 }
 
-.slider .slick-arrow.slick-prev {
-    transition: .4s;
-    left: 0;
-    background: url('../img/arrow-prev.svg') 0 0 / 100% no-repeat;
-
-    &:hover {
-        background: url('../img/arrow-prev_hover.svg') 0 0 / 100% no-repeat;   
-    }
-}
-
-.slider .slick-arrow.slick-next {
-    transition: .4s;
-    right: 24px;
-    background: url('../img/arrow-next.svg') 0 0 / 100% no-repeat;
-
-    &:hover {
-        background: url('../img/arrow-next_hover.svg') 0 0 / 100% no-repeat;   
-    }
-}
-
-.slick-slide {
-    line-height: 0;
-}
-
-.slide-item {
-    padding-right: 24px;
-
-    &:first-child {
-        margin-bottom: 24px;
-    }
-
+.slide {
     &__image {
         display: block;
         background-position: center;
         background-size: cover;
-        height: 150px;
+        height: 120px;
     }
-}
-
-@media (max-width: 768px) {
-    .gallery {
-
-        &__button {
-            font-size: 14px;
-            display: block;
-            padding: 4px 12px;
-        }
-    }
-
-.slick-arrow {
-    width: 40px;
-    height: 40px;
-}
-
-    .slide-item {
     
-        &__image {
-            display: block;
-            background-position: center;
-            background-size: cover;
-            height: 120px;
-        }
+    .slick-arrow {
+        width: 40px;
+        height: 40px;
     }
+
+}
 }

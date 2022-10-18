@@ -1,40 +1,41 @@
 <section class="section order-wrapper">
-    <h2 class="section__title">Форма</h2>
-    <p class="section__text">Должна иметь проверку полей: обязательное поле, формат, минимальное значение. При несоответствии должна выводиться соответствующая ошибка. Поле «Телефон» должен содержать маску ввода. 
-    </p>
-
-    <form class="order">
-        <h3 class="order__title">Заказать проект</h3>
-        <div class="order__row order__row_name">
-            <div class="field">
-                <label class="field__label" for="name">Название</label>
-                <div class="field__content">
-                    <input class="field__control" name="name" id="name" type="text" required>
-                </div> 
+    <div class="container">
+        <h2 class="section__title">Форма</h2>
+        <p class="section__text">Должна иметь проверку полей: обязательное поле, формат, минимальное значение. При несоответствии должна выводиться соответствующая ошибка. Поле «Телефон» должен содержать маску ввода. 
+        </p>
+    
+        <form class="order">
+            <h3 class="order__title">Заказать проект</h3>
+            <div class="order__row order__row_name">
+                <div class="field">
+                    <label class="field__label" for="name">Название</label>
+                    <div class="field__content">
+                        <input class="field__control" name="name" id="name" type="text" required>
+                    </div> 
+                </div>
             </div>
-        </div>
-
+    
             <div class="order__row order__row_control">
                 <div class="field">
                     <label class="field__label" for="price">Стоимость</label>
                         <div class="field__content">
-                            <input id="price" class="price" name="price" type="text">
-                        <div class="wrapper">
-                            <div class="slider_under-price"></div>
-                            <div class="legend"></div>
+                            <input id="price" class="price" name="price" type="text"  value='&#8381;'>
+                            <div class="wrapper">
+                                <div class="slider_under-price"></div>
+                                <div class="legend"></div>
+                            </div>
                         </div>
-                    </div>
                 </div>
-
+    
                 <div class="field">
                     <label class="field__label" >Площадь</label>
-<div class="field__content">
-<div class="number" data-step="1" data-min="1" data-max="100">
-    <a href="#" class="number-minus">
-        <svg class="svg-min" width="16" height="2" viewBox="0 0 14 2" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L13 0.999999" stroke-width="2" stroke-linecap="round"/>
-            </svg>            
-    </a>
+                    <div class="field__content">
+                        <div class="number" data-step="1" data-min="1" data-max="100">
+                            <a href="#" class="number-minus">
+                                <svg class="svg-min" width="16" height="2" viewBox="0 0 14 2" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L13 0.999999" stroke-width="2" stroke-linecap="round"/>
+                                </svg>            
+                            </a>
     <input class="number-text" type="text" id="count" name="count" value="1">
     <a href="#" class="number-plus">
         <svg class="svg-plus" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,10 +43,9 @@
         <path d="M2 8L14 8" stroke-width="2" stroke-linecap="round"/>
         </svg>
         </a>
-</div>
-</div>
+    </div>
+    </div>
                 </div>
-
                 <div class="field checkbox-mobile">
                     <label class="field__label">Отделка</label>
                         <div class="field__content checkbox">
@@ -56,118 +56,118 @@
                         </div>
                 </div>
             </div>
-
-            <div class="order__row order__row_contacts">
-
-                <div class="field">
-                    <label class="field__label" for="phone">Телефон</label>
-                    <div class="field__content">
-                        <input class="field__control" id="phone" name="phone" type="text" placeholder="+7" required>
-                        <span class="field__indicator indicator">
-                            <svg class="indicator__error" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18 6L6 18M6 6L18 18" stroke="#DC3545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-
-                            <svg class="indicator__success" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    
+                <div class="order__row order__row_contacts">
+    
+                    <div class="field">
+                        <label class="field__label" for="phone">Телефон</label>
+                        <div class="field__content">
+                            <input class="field__control" id="phone" name="phone" type="text" placeholder="+7" required>
+                            <span class="field__indicator indicator">
+                                <svg class="indicator__error" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 6L6 18M6 6L18 18" stroke="#DC3545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                            
-                        </span>
-                    </div>
-                 
-                </div>
-
-                <div class="field">
-                    <label class="field__label" for="email">Почта</label>
-                    <div class="field__content">
-                        <input class="field__control" id="email" name="email" type="email" required>
-                        <span class="field__indicator indicator">
-                            <svg class="indicator__error" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18 6L6 18M6 6L18 18" stroke="#DC3545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-
-                            <svg class="indicator__success" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 6L9 17L4 12" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                            
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="order__row attach">
-                    <label class="field__label" for="attach__form">Приложить файлы</label>
-                    <div class="attach__form" id="attach__form">
-                        <p class="attach__title">Кликните или перенесите файлы в эту область. Только JPG, до 1 Мб</p>
-                    </div>
-                    <div class="attach__content">
-                            <div class="attach__content_delete"><img src="./img/x-close.svg" alt="x"></div>
-                            <div class="attach__content_name">filename-01.jpg</div>
-                            <div class="attach__content_progress"><img src="./img/Line_179.svg" alt="line"></div>
-
-                    </div>
-            </div>
-
-            <div class="order__row order__row_password-content">
-                <div class="field">
-                    <label class="field__label" for="comfortable">Удобства</label>
-                    <div class="field__content">
-                        <div class="select" id="select">
-                            <div class="select__item select__item_base">
-                                <span class="select__value">
-                                    Любые
-                                </span>
-                                <span class="select__button">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M19.5 15L12 7.5" stroke="#0066CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M4.5 15L12 7.5" stroke="#0066CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    
+                                <svg class="indicator__success" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 6L9 17L4 12" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                </span>
-                            </div>
-
-                            <div class="select__options">
-                                <div class="select__item"><span class="select__value">Кирпичный</span></div>
-                                <div class="select__item"><span class="select__value">Деревянный</span></div>
-                                <div class="select__item"><span class="select__value">Мололитный</span></div>
-                                <div class="select__item"><span class="select__value">Каркасный</span></div>
-                                <div class="select__item"><span class="select__value">Щитовой</span></div>
-                            </div>
-                            <input type="hidden" id="comfortable" name="comfortable">
+                                                
+                            </span>
                         </div>
-                    </div> 
-                </div>
-                
-                <div class="field">
-                    <label class="field__label" for="password">Пароль</label>
-
-                    <div class="password">
-                        <div class="password__content">
-                            <input class="password__field" type="password" id="password" name="password">
+                    </div>
+    
+                    <div class="field">
+                        <label class="field__label" for="email">Почта</label>
+                        <div class="field__content">
+                            <input class="field__control" id="email" name="email" type="email" required>
+                            <span class="field__indicator indicator">
+                                <svg class="indicator__error" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 6L6 18M6 6L18 18" stroke="#DC3545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+    
+                                <svg class="indicator__success" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 6L9 17L4 12" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                                
+                            </span>
                         </div>
-                        <span class="password__button">
-                            <img class="eye-off hide" src="./img/eye-off.svg" alt="eye-off">
-                            <svg _ngcontent-ihb-c117="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-on"><path _ngcontent-ihb-c117="" d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle _ngcontent-ihb-c117="" cx="12" cy="12" r="3"></circle></svg>
-                        </span>
-
                     </div>
                 </div>
-            </div>
-
-            <div class="order__row order__row_wishes">
-                <div class="field">
-                    <label class="field__label">Пожелания</label>
-                    <div class="field__content">
-                        <input class="field__control" id="wishes" type="text" placeholder="укажите через запятую">
-                        <div class="tags">
+    
+                <div class="order__row attach">
+                        <label class="field__label" for="attach__form">Приложить файлы</label>
+                        <div class="attach__form" id="attach__form">
+                            <p class="attach__title">Кликните или перенесите файлы в эту область. Только JPG, до 1 Мб</p>
                         </div>
-                        <input type="hidden" id="tags" name="tags">
-                    </div>
-
+                        <div class="attach__content">
+                                <div class="attach__content_delete"><img src="./img/x-close.svg" alt="x"></div>
+                                <div class="attach__content_name">filename-01.jpg</div>
+                                <div class="attach__content_progress"><img src="./img/Line_179.svg" alt="line"></div>
+    
+                        </div>
                 </div>
-            </div>
-
-            <div class="order__row order__row_submit-center">
-                    <button class="order__submit" type="submit">Отправить заявку</button>
-            </div>
-    </form>
+    
+                <div class="order__row order__row_password-content">
+                    <div class="field">
+                        <label class="field__label" for="comfortable">Удобства</label>
+                        <div class="field__content">
+                            <div class="select" id="select">
+                                <div class="select__item select__item_base">
+                                    <span class="select__value">
+                                        Любые
+                                    </span>
+                                    <span class="select__button">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19.5 15L12 7.5" stroke="#0066CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M4.5 15L12 7.5" stroke="#0066CC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                    </span>
+                                </div>
+    
+                                <div class="select__options">
+                                    <div class="select__item"><span class="select__value">Кирпичный</span></div>
+                                    <div class="select__item"><span class="select__value">Деревянный</span></div>
+                                    <div class="select__item"><span class="select__value">Мололитный</span></div>
+                                    <div class="select__item"><span class="select__value">Каркасный</span></div>
+                                    <div class="select__item"><span class="select__value">Щитовой</span></div>
+                                </div>
+                                <input type="hidden" id="comfortable" name="comfortable">
+                            </div>
+                        </div> 
+                    </div>
+                    
+                    <div class="field">
+                        <label class="field__label" for="password">Пароль</label>
+    
+                        <div class="password">
+                            <div class="password__content">
+                                <input class="password__field" type="password" id="password" name="password">
+                            </div>
+                            <span class="password__button">
+                                <img class="eye-off hide" src="./img/eye-off.svg" alt="eye-off">
+                                <svg _ngcontent-ihb-c117="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-on"><path _ngcontent-ihb-c117="" d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle _ngcontent-ihb-c117="" cx="12" cy="12" r="3"></circle></svg>
+                            </span>
+    
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="order__row order__row_wishes">
+                    <div class="field">
+                        <label class="field__label">Пожелания</label>
+                        <div class="field__content">
+                            <input class="field__control" id="wishes" type="text" placeholder="укажите через запятую">
+                            <div class="tags">
+                            </div>
+                            <input type="hidden" id="tags" name="tags">
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="order__row order__row_submit-center">
+                        <button class="order__submit" type="submit">Отправить заявку</button>
+                </div>
+        </form>
+    </div>
 </section>

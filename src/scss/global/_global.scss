@@ -55,6 +55,8 @@ h3 {
 .container {
     max-width: 884px;
     margin: 0 auto;
+    padding-bottom: 64px;
+    padding: 0 12px;
 }
 
 input {
@@ -67,10 +69,9 @@ input {
 }
 
 .section {
-    max-width: 884px;
     padding-bottom: 64px;
     margin: 0 auto;
-    
+
     &__text {
         padding-bottom: 56px;
     }
@@ -80,6 +81,12 @@ input {
         padding-left: 10px;
         font-size: 48px;
         line-height: 64px;
+
+        &-center {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+        }
     }
 }
 
@@ -118,12 +125,6 @@ p {
     font-size: 16px;
     line-height: 24px;
 }
-
-.field {
-    max-width: 279px;
-    margin: 0 auto;
-}
-
 }
 
 

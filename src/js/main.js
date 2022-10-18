@@ -1,14 +1,25 @@
-
 //InputMask
-$('#phone').mask('+7 (999) 999-99-99');
+$('#phone').mask('+7 999 999-99-99');
 
 var cleave = new Cleave('#price', {
   delimiter: ' ',
   numeral: true,
+  numeralIntegerScale: 10,
+  prefix: ' ₽',
+  tailPrefix: true,
+  numeralPositiveOnly: true,
   numeralThousandsGroupStyle: 'thousand'
 });
 
-
+var cleave = new Cleave('#count', {
+  delimiter: ' ',
+  numeral: true,
+  numeralIntegerScale: 8,
+  prefix: ' м²',
+  tailPrefix: true,
+  numeralPositiveOnly: true,
+  numeralThousandsGroupStyle: 'thousand'
+});
 
 //Validate Email, Number
 $(document).ready(function() {
@@ -22,7 +33,7 @@ $(document).ready(function() {
 
       phone: {
         required: true,
-        minlength: 18
+        minlength: 16
       },
 
     },
@@ -70,6 +81,7 @@ $(document).ready(function() {
 		var $input = $row.find('.number-text');
 		var step = $row.data('step');
 		var val = parseFloat($input.val());
+    console.log(val);
 		if ($(this).hasClass('number-minus')) {
 			val -= step;
 		} else {
@@ -82,14 +94,13 @@ $(document).ready(function() {
 });
 
 //Slider
-$('#slick').slick({
+$('.js-slider').slick({
   rows: 2,
   slidesToShow: 4,
   slidesToScroll: 4,
   adaptiveHeight: true,
   arrows: true,
   dots: true,
-
   appendDots:$(".gallery__footer"),
   responsive: [
     {
@@ -103,48 +114,33 @@ $('#slick').slick({
 ]
   });
 
-$('.gallery__button.bath').on('click', function(e){
+$('.gallery__button.gallery__button_bath').on('click', function(e){
   e.preventDefault()
-  $(".gallery__button").removeClass("slick-active");
-  $(this).addClass('slick-active')
-  $('#slick').slick("slickGoTo", 1);
+  $(".gallery__button").removeClass("gallery__active");
+  $(this).addClass('gallery__active')
+  $('.js-slider').slick("slickGoTo", 1);
   });
 
-$('.gallery__button.sauna').on('click', function(e){
+$('.gallery__button.gallery__button_sauna').on('click', function(e){
   e.preventDefault()
-  $(".gallery__button").removeClass("slick-active");
-  $(this).addClass('slick-active')
-  $('#slick').slick("slickGoTo", 5);
+  $(".gallery__button").removeClass("gallery__active");
+  $(this).addClass('gallery__active')
+  $('.js-slider').slick("slickGoTo", 5);
   });
 
-$('.gallery__button.hammams').on('click', function(e){
+$('.gallery__button.gallery__button_hammams').on('click', function(e){
   e.preventDefault()
-  $(".gallery__button").removeClass("slick-active");
-  $(this).addClass('slick-active')
-  $('#slick').slick("slickGoTo", 9);
+  $(".gallery__button").removeClass("gallery__active");
+  $(this).addClass('gallery__active')
+  $('.js-slider').slick("slickGoTo", 9);
   });
 
-$('.gallery__button.swim').on('click', function(e){
+$('.gallery__button.gallery__button_swim').on('click', function(e){
   e.preventDefault()
-  $(".gallery__button").removeClass("slick-active");
-  $(this).addClass('slick-active')
-  $('#slick').slick("slickGoTo", 13);
+  $(".gallery__button").removeClass("gallery__active");
+  $(this).addClass('gallery__active')
+  $('.js-slider').slick("slickGoTo", 13);
   });
-
-
-// function filteredSlick (filteredClass, slickName) {
-//   $(slickName).slick('unslick');
-//   $(slickName).find('.slide-item').each(function(e){ 
-//     if ($(this).attr('data-set') !== filteredClass) {
-//       $(this).addClass('hide')
-//     } 
-//   }
-//   )
-//   $(slickName).slick({
-//     rows: 2,
-//     slidesToShow: 4,
-//     });
-// }
 
 //Slider for input
   $(function(){
@@ -215,35 +211,19 @@ $('body').on('click', '.password__button', function(){
 
 //Create array for post
   $('#wishes').on('input', function(){
-    $value = $(this).val().split(' ')
+    tags = []
+    result = ''
+    $value = $(this).val().split(', ')
     if ($value.length > 1 ) {
       $(this).val('')
-      tags = []
-      result = ''
       $('.tags__item').each(function(key, value) {
-        tags.push($(value).text())
+        tags.push($value)
         result = tags.join(',')
         $('#tags').val(result)
-        console.log($('#tags').val())
       })
       $('.tags').append(`<div class="tags__item"><span class="tags__value">${$value[0]}</span><span class="tags__delete"><img src="./img/Icon_delete.svg" alt="Icon_delete"></span></div>`)
     }
   })
-
-//In basket
-$('.table__button').click(function(e){
-  e.preventDefault()
-  $('html').animate({
-    scrollTop: $('.order').offset().top + 50
-});
-  arr = []
-  $price = $(this).parent().parent().find('td:nth(2)').text()
-  arr = $price.split(' х ')
-  $area = (arr.reduce((total, amount) => total + amount))/1000000;
-  $('#name').val($(this).parent().parent().find('td:nth(0)').text())
-  $('#price').val($(this).parent().parent().find('td:nth(3)').text())
-  $('#count').val($area)
-})
 
 //Delete tags
   $(document).on('click','.tags__delete', (function(){
@@ -252,9 +232,3 @@ $('.table__button').click(function(e){
   })
   }))
 
-document.querySelector('.number-text').addEventListener('change', function(){
-  let value = this.value;
-  if(!value) return;
-  value = value.replace(/ м²/g, '');
-  this.value = value + ' м²';
-}, false);
