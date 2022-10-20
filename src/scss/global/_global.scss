@@ -26,25 +26,7 @@ a {
     display: inline-block;
 }
 
-p {
-    padding-left: 9px;
-    font-size: 20px;
-    line-height: 32px;
-}
 
-h1 {
-    font-weight: 700;
-    font-size: 64px;
-    line-height: 64px;
-    padding-top: 2px;
-    padding-left: 16px;
-}
-
-h2 {
-    padding-left: 10px;
-    font-size: 48px;
-    line-height: 64px;
-}
 
 h3 {
     font-weight: 700;
@@ -69,23 +51,25 @@ input {
 }
 
 .section {
-    padding-bottom: 64px;
     margin: 0 auto;
+    padding-bottom: 94px;
 
     &__text {
-        padding-bottom: 56px;
+        font-size: 20px;
+        line-height: 32px;
+        padding-bottom: 55px;
     }
 
     &__title {
-        padding-bottom: 9px;
-        padding-left: 10px;
-        font-size: 48px;
-        line-height: 64px;
+            font-size: 48px;
+            line-height: 64px;
+            padding-bottom: 9px;
 
         &-center {
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                font-weight: 700;
+                font-size: 64px;
+                text-align: center;
+                margin: 0;
         }
     }
 }

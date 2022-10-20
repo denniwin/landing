@@ -1,7 +1,7 @@
 .gallery {
     &__header {
         position: relative;
-        padding-bottom: 66px;
+        padding-bottom: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -40,6 +40,10 @@
         transition: .4s;
         color: #fff;
         background: rgba(0, 102, 204);
+    }
+
+    .section__text {
+        padding-bottom: 75px;
     }
 }
 

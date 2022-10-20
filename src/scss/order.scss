@@ -1,11 +1,11 @@
     .order {
-        padding: 96px;
-        background: #F5F5F5;
+        padding: 80px 96px 96px;
+        background: #F5F5F7;
         border-radius: 20px;
         margin: 0 auto;
     
         &__title {
-            padding-bottom: 42px;
+            padding-bottom: 47px;
         }
     
         &__row {
@@ -60,7 +60,8 @@
 .field {
 
     &__label {
-        padding-bottom: 7px;
+        padding-bottom: 10px;
+        line-height: 24px;
         font-weight: 600;
         display: block;
     }
@@ -304,16 +305,38 @@
         color: #58585D;
     }
 
+    &__input[type=file] {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        position: absolute;
+        z-index: -10;
+    }
+
     &__title {
         font-size: 16px;
         padding: 28px 143px;
         text-align: center;
         line-height: 1.5;
+
+        label {
+            font-weight: bold;
+    
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+
+        &.dragover {
+            background-color: #fff;
+        }
     }
 
     &__content {
+        padding-top: 5px;
+        transition: .5s;
         display: flex;
-        padding-top: 22px;
         align-items: center;
 
         &_name {
@@ -322,9 +345,14 @@
         }
 
         &_delete {
+            cursor: pointer;
             display: flex;
             align-self: center;
             flex-grow: 1;
+        }
+
+        &_progress {
+            height: 4px;
         }
     }
 }
@@ -356,7 +384,7 @@
     .ui-slider {
 
         &-handle {
-            margin-top: -3px;
+            margin-top: -2px;
             margin-left: -8px;
             outline: none;
             position: absolute;
@@ -368,16 +396,23 @@
             -ms-touch-action: none;
             touch-action: none;
             }
+}
 
-        &-horizontal {
-            height: 0;
-            }
+    .ui-slider-horizontal {
+        height: 3px;
+        background-color: #c5c5c5;
+        }
+
+    .ui-slider-range-min {
+        height: 3px;
+        background-color: #06c;
     }
-    
+
     .ui-widget.ui-widget-content {
         border: 0px solid #c5c5c5;
-        }
-}
+    }
+    }
+
 
 .select {
     box-sizing: border-box;

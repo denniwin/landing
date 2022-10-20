@@ -19,7 +19,7 @@
                 <div class="field">
                     <label class="field__label" for="price">Стоимость</label>
                         <div class="field__content">
-                            <input id="price" class="price" name="price" type="text"  value='&#8381;'>
+                            <input id="price" class="price" name="price" type="text" value='&#8381;' required>
                             <div class="wrapper">
                                 <div class="slider_under-price"></div>
                                 <div class="legend"></div>
@@ -28,7 +28,7 @@
                 </div>
     
                 <div class="field">
-                    <label class="field__label" >Площадь</label>
+                    <label class="field__label">Площадь</label>
                     <div class="field__content">
                         <div class="number" data-step="1" data-min="1" data-max="100">
                             <a href="#" class="number-minus">
@@ -36,7 +36,7 @@
                                 <path d="M1 1L13 0.999999" stroke-width="2" stroke-linecap="round"/>
                                 </svg>            
                             </a>
-    <input class="number-text" type="text" id="count" name="count" value="1">
+    <input class="number-text" type="text" id="count" name="count" value="1" required>
     <a href="#" class="number-plus">
         <svg class="svg-plus" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M8 2V14" stroke-width="2" stroke-linecap="round"/>
@@ -50,7 +50,7 @@
                     <label class="field__label">Отделка</label>
                         <div class="field__content checkbox">
                             <label class="checkbox-ios">
-                                <input type="checkbox" id="checkbox" name="checkbox" value="Да">
+                                <input type="checkbox" id="checkbox" name="checkbox">
                                 <span class="checkbox-ios-switch"></span>
                             </label>
                         </div>
@@ -93,17 +93,11 @@
                         </div>
                     </div>
                 </div>
-    
                 <div class="order__row attach">
                         <label class="field__label" for="attach__form">Приложить файлы</label>
                         <div class="attach__form" id="attach__form">
-                            <p class="attach__title">Кликните или перенесите файлы в эту область. Только JPG, до 1 Мб</p>
-                        </div>
-                        <div class="attach__content">
-                                <div class="attach__content_delete"><img src="./img/x-close.svg" alt="x"></div>
-                                <div class="attach__content_name">filename-01.jpg</div>
-                                <div class="attach__content_progress"><img src="./img/Line_179.svg" alt="line"></div>
-    
+                            <input class="attach__input" id="attach__input" type="file" name="file" multiple>
+                            <p class="attach__title"><label for="attach__input">Кликните</label> или перенесите файлы в эту область. Только JPG, до 1 Мб</p>
                         </div>
                 </div>
     
@@ -141,7 +135,7 @@
     
                         <div class="password">
                             <div class="password__content">
-                                <input class="password__field" type="password" id="password" name="password">
+                                <input class="password__field" type="password" id="password" name="password" required>
                             </div>
                             <span class="password__button">
                                 <img class="eye-off hide" src="./img/eye-off.svg" alt="eye-off">
@@ -156,7 +150,7 @@
                     <div class="field">
                         <label class="field__label">Пожелания</label>
                         <div class="field__content">
-                            <input class="field__control" id="wishes" type="text" placeholder="укажите через запятую">
+                            <input class="field__control" id="wishes" type="text" placeholder="укажите через запятую" required>
                             <div class="tags">
                             </div>
                             <input type="hidden" id="tags" name="tags">

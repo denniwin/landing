@@ -1,3 +1,7 @@
+.table-wrapper {
+    padding-bottom: 104px;
+}
+
 .table {
 	width: 100%;
 	border-collapse: collapse; 
@@ -8,7 +12,7 @@
         font-size: 14px;
         font-weight: 600;
         display: block;
-        padding: 0 9px;
+        padding: 3px 16px 5px;
         text-decoration: none;
         color: #0066CC;;
         line-height: 32px;
@@ -57,8 +61,7 @@
     }
 
     td {
-        padding: 7px 20px;
-        padding-left: 33px;
+        padding: 16px 20px 16px 28px;
     }
     
 }
