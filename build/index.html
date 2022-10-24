@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-	<html lang="@@lang">
+	<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
@@ -19,15 +19,15 @@
 				href="@@favicon.png"
 				type="image/x-icon">
                 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://snipp.ru/cdn/jqueryui/1.12.1/jquery-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick-theme.css"/>
-
+				<link rel="stylesheet" href="https://snipp.ru/cdn/jqueryui/1.12.1/jquery-ui.min.css">
+				<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+				<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick-theme.css"/>
+				<link rel="stylesheet" href="https://snipp.ru/cdn/fancybox/3.5.7/jquery.fancybox.min.css">
 	<link rel="stylesheet"
 				href="css/libs.min.css">
 	<link rel="stylesheet"
 				href="css/style.min.css">
-	<title>@@title</title>
+	<title>Test Form</title>
 </head>
 
 
@@ -40,7 +40,7 @@
     </ul>
 </header>
 
-<section class="section test-wrapper">
+<section class="section">
     <div class="container">
         <nav class="breadcrumb"> 
             <ul class="breadcrumb__menu">
@@ -57,6 +57,14 @@
 
 
 
+	<section class="section modal">
+    <div class="container">
+        <div style="display: none; width: 500px;" id="hidden">
+            <h3 style="text-align: center; padding-bottom: 10px;">Заявка отправлена!</h3>
+            <p style="text-align: center;">Благодарим за обращение. Данные успешно приняты и отправлены менеджеру</p>
+        </div>
+    </div>
+</section>
 	<section class="section table-wrapper">
     <div class="container">
         <h2 class="section__title">Таблица</h2>
@@ -119,6 +127,16 @@
                     <label class="field__label" for="name">Название</label>
                     <div class="field__content">
                         <input class="field__control" name="name" id="name" type="text" required>
+                        <span class="field__indicator indicator">
+                            <svg class="indicator__error" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 6L6 18M6 6L18 18" stroke="#DC3545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                            <svg class="indicator__success" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                            
+                        </span>
                     </div> 
                 </div>
             </div>
@@ -139,13 +157,13 @@
                     <label class="field__label">Площадь</label>
                     <div class="field__content">
                         <div class="number" data-step="1" data-min="1" data-max="100">
-                            <a href="#" class="number-minus">
+                            <a href="#" class="number__minus">
                                 <svg class="svg-min" width="16" height="2" viewBox="0 0 14 2" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 1L13 0.999999" stroke-width="2" stroke-linecap="round"/>
                                 </svg>            
                             </a>
-    <input class="number-text" type="text" id="count" name="count" value="1" required>
-    <a href="#" class="number-plus">
+    <input class="number__text" type="text" id="count" name="count" value="1" required>
+    <a href="#" class="number__plus">
         <svg class="svg-plus" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M8 2V14" stroke-width="2" stroke-linecap="round"/>
         <path d="M2 8L14 8" stroke-width="2" stroke-linecap="round"/>
@@ -154,7 +172,7 @@
     </div>
     </div>
                 </div>
-                <div class="field checkbox-mobile">
+                <div class="field">
                     <label class="field__label">Отделка</label>
                         <div class="field__content checkbox">
                             <label class="checkbox-ios">
@@ -205,7 +223,7 @@
                         <label class="field__label" for="attach__form">Приложить файлы</label>
                         <div class="attach__form" id="attach__form">
                             <input class="attach__input" id="attach__input" type="file" name="file" multiple>
-                            <p class="attach__title"><label for="attach__input">Кликните</label> или перенесите файлы в эту область. Только JPG, до 1 Мб</p>
+                            <p class="attach__title"><label for="attach__input">Кликните</label> или перенесите файлы в эту область. Только JPG, до 1 Мб.</p>
                         </div>
                 </div>
     
@@ -258,7 +276,7 @@
                     <div class="field">
                         <label class="field__label">Пожелания</label>
                         <div class="field__content">
-                            <input class="field__control" id="wishes" type="text" placeholder="укажите через запятую" required>
+                            <input class="field__control" id="wishes" type="text" placeholder="укажите через запятую">
                             <div class="tags">
                             </div>
                             <input type="hidden" id="tags" name="tags">
@@ -287,7 +305,7 @@
             </ul>
         </div>
     </div>
-    <div class="JSslider slider">
+    <div class="js-slider slider">
 
         <div class="slider__item category-1">
             <span class="slider__image" style="background-image: url(./img/image_bath_1.jpg);"></span>
@@ -295,99 +313,53 @@
         <div class="slider__item category-1">
             <span class="slider__image" style="background-image: url(./img/image_bath_2.jpg);"></span>
         </div>
-        <div class="slider__item category-1">
+        <div class="slider__item category-2">
             <span class="slider__image" style="background-image: url(./img/image_bath_3.jpg);"></span>
         </div>
-        <div class="slider__item category-1">
+        <div class="slider__item category-2">
             <span class="slider__image" style="background-image: url(./img/image_bath_4.jpg);"></span>
         </div>
-        <div class="slider__item category-1">
+        <div class="slider__item category-3">
             <span class="slider__image" style="background-image: url(./img/image_bath_1.jpg);"></span>
         </div>
-        <div class="slider__item category-1">
+        <div class="slider__item category-3">
             <span class="slider__image" style="background-image: url(./img/image_bath_2.jpg);"></span>
         </div>
-        <div class="slider__item category-1">
+        <div class="slider__item category-3">
+            <span class="slider__image" style="background-image: url(./img/image_bath_2.jpg);"></span>
+        </div>
+        <div class="slider__item category-3">
+            <span class="slider__image" style="background-image: url(./img/image_bath_2.jpg);"></span>
+        </div>
+        <div class="slider__item category-3">
+            <span class="slider__image" style="background-image: url(./img/image_bath_2.jpg);"></span>
+        </div>
+        <div class="slider__item category-3">
+            <span class="slider__image" style="background-image: url(./img/image_bath_2.jpg);"></span>
+        </div>
+        <div class="slider__item category-4">
             <span class="slider__image" style="background-image: url(./img/image_bath_3.jpg);"></span>
         </div>
-        <div class="slider__item category-1">
+        <div class="slider__item category-4">
             <span class="slider__image" style="background-image: url(./img/image_bath_4.jpg);"></span>
         </div>
 
-        <div class="slider__item category-2">
-            <span class="slider__image" style="background-image: url(./img/image_sauna_1.jpg);"></span>
-        </div>
-        <div class="slider__item category-2">
-            <span class="slider__image" style="background-image: url(./img/image_sauna_2.jpg);"></span>
-        </div>
-        <div class="slider__item category-2">
-            <span class="slider__image" style="background-image: url(./img/image_sauna_3.jpg);"></span>
-        </div>
-        <div class="slider__item category-2">
-            <span class="slider__image" style="background-image: url(./img/image_sauna_4.jpg);"></span>
-        </div>
-        <div class="slider__item category-2">
-            <span class="slider__image" style="background-image: url(./img/image_sauna_1.jpg);"></span>
-        </div>
-        <div class="slider__item category-2">
-            <span class="slider__image" style="background-image: url(./img/image_sauna_2.jpg);"></span>
-        </div>
-        <div class="slider__item category-2">
-            <span class="slider__image" style="background-image: url(./img/image_sauna_3.jpg);"></span>
-        </div>
-        <div class="slider__item category-2">
-            <span class="slider__image" style="background-image: url(./img/image_sauna_4.jpg);"></span>
-        </div>
 
-        <div class="slider__item category-3">
-            <span class="slider__image" style="background-image: url(./img/image_hammam_1.jpg);"></span>
-        </div>
-        <div class="slider__item category-3">
-            <span class="slider__image" style="background-image: url(./img/image_hammam_2.jpg);"></span>
-        </div>
-        <div class="slider__item category-3">
-            <span class="slider__image" style="background-image: url(./img/image_hammam_3.jpg);"></span>
-        </div>
-        <div class="slider__item category-3">
-            <span class="slider__image" style="background-image: url(./img/image_hammam_3.jpg);"></span>
-        </div>
-        <div class="slider__item category-3">
-            <span class="slider__image" style="background-image: url(./img/image_hammam_1.jpg);"></span>
-        </div>
-        <div class="slider__item category-3">
-            <span class="slider__image" style="background-image: url(./img/image_hammam_2.jpg);"></span>
-        </div>
-        <div class="slider__item category-3">
-            <span class="slider__image" style="background-image: url(./img/image_hammam_3.jpg);"></span>
-        </div>
-        <div class="slider__item category-3">
-            <span class="slider__image" style="background-image: url(./img/image_hammam_3.jpg);"></span>
-        </div>
 
-        <div class="slider__item category-4">
-            <span class="slider__image" style="background-image: url(./img/image_bath_1.jpg);"></span>
-        </div>
-        <div class="slider__item category-4">
-            <span class="slider__image" style="background-image: url(./img/image_bath_2.jpg);"></span>
-        </div>
-        <div class="slider__item category-4">
-            <span class="slider__image" style="background-image: url(./img/image_sauna_1.jpg);"></span>
-        </div>
-        <div class="slider__item category-4">
-            <span class="slider__image" style="background-image: url(./img/image_sauna_2.jpg);"></span>
-        </div>
-        <div class="slider__item category-4">
-            <span class="slider__image" style="background-image: url(./img/image_hammam_1.jpg);"></span>
-        </div>
-        <div class="slider__item category-4">
-            <span class="slider__image" style="background-image: url(./img/image_hammam_2.jpg);"></span>
-        </div>
-        <div class="slider__item category-4">
-            <span class="slider__image" style="background-image: url(./img/image_bath_1.jpg);"></span>
-        </div>
-        <div class="slider__item category-4">
-            <span class="slider__image" style="background-image: url(./img/image_bath_1.jpg);"></span>
-        </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
     <div class="gallery__footer"></div>
 </section>
@@ -400,7 +372,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
+<script src="https://snipp.ru/cdn/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 <script src="./js/main.min.js"></script>
+<script src="./js/filterSlick.js"></script>
+
 </body>
 
 </html>

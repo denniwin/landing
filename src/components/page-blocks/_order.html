@@ -11,6 +11,16 @@
                     <label class="field__label" for="name">Название</label>
                     <div class="field__content">
                         <input class="field__control" name="name" id="name" type="text" required>
+                        <span class="field__indicator indicator">
+                            <svg class="indicator__error" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 6L6 18M6 6L18 18" stroke="#DC3545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+
+                            <svg class="indicator__success" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="#28A745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                            
+                        </span>
                     </div> 
                 </div>
             </div>
@@ -31,13 +41,13 @@
                     <label class="field__label">Площадь</label>
                     <div class="field__content">
                         <div class="number" data-step="1" data-min="1" data-max="100">
-                            <a href="#" class="number-minus">
+                            <a href="#" class="number__minus">
                                 <svg class="svg-min" width="16" height="2" viewBox="0 0 14 2" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 1L13 0.999999" stroke-width="2" stroke-linecap="round"/>
                                 </svg>            
                             </a>
-    <input class="number-text" type="text" id="count" name="count" value="1" required>
-    <a href="#" class="number-plus">
+    <input class="number__text" type="text" id="count" name="count" value="1" required>
+    <a href="#" class="number__plus">
         <svg class="svg-plus" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M8 2V14" stroke-width="2" stroke-linecap="round"/>
         <path d="M2 8L14 8" stroke-width="2" stroke-linecap="round"/>
@@ -46,7 +56,7 @@
     </div>
     </div>
                 </div>
-                <div class="field checkbox-mobile">
+                <div class="field">
                     <label class="field__label">Отделка</label>
                         <div class="field__content checkbox">
                             <label class="checkbox-ios">
@@ -97,7 +107,7 @@
                         <label class="field__label" for="attach__form">Приложить файлы</label>
                         <div class="attach__form" id="attach__form">
                             <input class="attach__input" id="attach__input" type="file" name="file" multiple>
-                            <p class="attach__title"><label for="attach__input">Кликните</label> или перенесите файлы в эту область. Только JPG, до 1 Мб</p>
+                            <p class="attach__title"><label for="attach__input">Кликните</label> или перенесите файлы в эту область. Только JPG, до 1 Мб.</p>
                         </div>
                 </div>
     
@@ -150,7 +160,7 @@
                     <div class="field">
                         <label class="field__label">Пожелания</label>
                         <div class="field__content">
-                            <input class="field__control" id="wishes" type="text" placeholder="укажите через запятую" required>
+                            <input class="field__control" id="wishes" type="text" placeholder="укажите через запятую">
                             <div class="tags">
                             </div>
                             <input type="hidden" id="tags" name="tags">

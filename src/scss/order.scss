@@ -126,6 +126,7 @@
         }
 
         & .checkbox-ios-switch {
+            transition: .5s;
             position: relative;	
             display: inline-block;
             box-sizing: border-box;			
@@ -135,6 +136,11 @@
             vertical-align: top;
             background: #eee;
             transition: .2s;
+
+            &:hover {
+                transition: .5s;
+                background: #06c;
+            }
 
             &:before {
                 content: '';
@@ -147,7 +153,7 @@
                 border-radius: 50%;
                 cursor: pointer;
                 background: white;
-                transition: .15s;
+                transition: .5s;
             }
         }
 
@@ -195,7 +201,7 @@
     min-width: 224px;
     height: 56px;
     
-    &-minus {
+    &__minus {
         transition: .3s;
         position: absolute;
         top: 0;
@@ -237,7 +243,7 @@
             }
     }
     
-    &-plus {
+    &__plus {
         transition: .3s;
         position: absolute;
         top: 0;
@@ -250,7 +256,6 @@
         font-size: 20px;
         font-weight: 600;
         text-align: center;
-        color: var(--primary);
         text-decoration: none;
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
@@ -269,7 +274,6 @@
             transition: .2s;
             color: #fff;
             background-color: #0066CC;
-            // background-color: $primary-color;
             border: 1px solid #0066CC;
 
             .svg-plus {
@@ -278,7 +282,7 @@
 }
     }
 
-    &-text {
+    &__text {
         border-radius: 4px;
         display: inline-block;
         font-size: 16px;
@@ -314,6 +318,7 @@
     }
 
     &__title {
+        transition: .7s;
         font-size: 16px;
         padding: 28px 143px;
         text-align: center;
@@ -329,8 +334,16 @@
         }
 
         &.dragover {
-            background-color: #fff;
-        }
+            border-radius: 4px;
+            transform: scale(1.05, 1.15);
+            opacity: .8;
+            transition: .7s;
+            color: #fff;
+            background: #1A2980;
+            box-shadow: 10px 8px 20px rgba(0, 0, 0, 0.265);
+            background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);
+            background: linear-gradient(to right, #26D0CE, #1A2980);
+}
     }
 
     &__content {
@@ -361,7 +374,7 @@
     position: absolute;
     width: 100%;
 	margin: 0 auto;
-    bottom: -33px;
+    bottom: -30px;
     text-align: center;
 
     .legend {
@@ -395,19 +408,20 @@
             cursor: pointer;
             -ms-touch-action: none;
             touch-action: none;
+            border: 1px solid #06c;
+            background: #06c;
             }
-}
 
-    .ui-slider-horizontal {
-        height: 3px;
-        background-color: #c5c5c5;
+        &-horizontal {
+            height: 0px;
+            background-color: #c5c5c5;
+            }
+
+        &-range-min {
+            height: 3px;
+            background-color: #06c;
         }
-
-    .ui-slider-range-min {
-        height: 3px;
-        background-color: #06c;
-    }
-
+}
     .ui-widget.ui-widget-content {
         border: 0px solid #c5c5c5;
     }
@@ -600,7 +614,7 @@
     width: 100%;
     display: flex;
 
-    &-text {
+    &__text {
         display: block;
         max-width: 100%;
         margin: 0;
