@@ -57,9 +57,10 @@ submitHandler: function(form, event) {event.preventDefault()
         $('.order').find('.tags').remove();
         $('.order').find('.attach__content').remove();
         $('.order').trigger('reset');
-        $('.field__control').removeClass('field__control_valid')
+        $('.order .select .select__item_base .select__value').text('Любые');
         $('.slider_under-price').slider( "value", 0 );
-      } else alert('Произошла ошибка, проверьте корректность ввода данных.');
+      } else 
+      alert('Произошла ошибка, проверьте корректность ввода данных.');
     }
   });
 }
@@ -75,6 +76,15 @@ $(window).keyup(function(e){
 
 $('.checkbox input').focusout(function(){
 	$(this).parent().removeClass('focused');
+});
+
+
+//
+$('.table__button').on('click', function(e) {
+  e.preventDefault();
+  let text = $(this).text();
+  $(this).toggleClass('table__button-active');
+  $(this).text(text == "В корзину" ? "В корзине" : "В корзину");
 });
 
 //Counter
@@ -102,8 +112,8 @@ $(function(){
   $('.slider_under-price').slider({
     animate: "slow",
     range:'min',
-    min: 0,
-    max: 4000000,
+    min: 10000000,
+    max: 40000000,
     value: 0,
     step: 1000,
     slide: function(event, ui){
@@ -117,23 +127,6 @@ $(function(){
   }); 
 });
 
-//label for slider
-  var items = ['10','20','30','40+'];
-  var s = $(".slider_under-price");
-
-s.slider({
-  min:1,
-  max:items.length,
-});
-
-var oneBig = 100 / (items.length - 1);
-
-$.each(items, function(key,value){
-  var w = oneBig;
-  if (key === 0 || key === items.length-1)
-    w = oneBig/2;
-  $(".legend").append(`<label class="legend__label" style='width: ${w}%'>${value}</label>`);
-});
 
 //Show select menu
 $(".select__item_base").click(function(){
@@ -200,19 +193,24 @@ $('.gallery__button.gallery__button_swim').on('click', function(e){
 
 //Create array for post
 $('#wishes').on('input', function(){
-  let $value = $(this).val().split(', ');
-  if ($value.length > 1 ) {
-    $(this).val('');
-    $('.tags').append(`<div class="tags__item"><span class="tags__value">${$value[0]}</span><span class="tags__delete"><img src="./img/Icon_delete.svg" alt="Icon_delete"></span></div>`);
-  }
+    let $value = $(this).val().split(', ');
+    if ($value.length > 1 ) {
+      $(this).val('');
+      $('.tags').append(`<div class="tags__item"><span class="tags__value">${$value[0]}</span><span class="tags__delete"><img src="./img/Icon_delete.svg" alt="Icon_delete"></span></div>`);
+    }
+  
+    let tags = [];
+    let result = '';
+    if ($(this).val().length > 3) {
+      tags.push(`${$('#wishes').val()}`)
+    } 
+    $('.tags__value').each(function(key, value) {
+      tags.push(`${$(value).text()}`);
+    })
 
-  let tags = [];
-  let result = '';
-  $('.tags__value').each(function(key, value) {
-    tags.push(`${key + 1} - ${$(value).text()}`);
-  })
-  result = tags.join(', ');
-  $('#tags').val(result);
+    result = tags.join(', ');
+    $('#tags').val(result);
+
 })
 
 //Delete tags

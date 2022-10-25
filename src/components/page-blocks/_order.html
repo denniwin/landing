@@ -1,4 +1,4 @@
-<section class="section order-wrapper">
+<section id="order" class="section order-wrapper">
     <div class="container">
         <h2 class="section__title">Форма</h2>
         <p class="section__text">Должна иметь проверку полей: обязательное поле, формат, минимальное значение. При несоответствии должна выводиться соответствующая ошибка. Поле «Телефон» должен содержать маску ввода. 
@@ -29,10 +29,15 @@
                 <div class="field">
                     <label class="field__label" for="price">Стоимость</label>
                         <div class="field__content">
-                            <input id="price" class="price" name="price" type="text" value='&#8381;' required>
-                            <div class="wrapper">
+                            <input id="price" class="price" name="price" type="text" value='0 &#8381;' required>
+                            <div class="wrapper-scale">
                                 <div class="slider_under-price"></div>
-                                <div class="legend"></div>
+                                    <div class="slider-scale" style="counter-reset: section -1;">
+                                        <div class="slider-scale_tick" data-label="10"></div>
+                                        <div class="slider-scale_tick" data-label="20"></div>
+                                        <div class="slider-scale_tick" data-label="30"></div>
+                                        <div class="slider-scale_tick" data-label="40+"></div>
+                                    </div>
                             </div>
                         </div>
                 </div>
@@ -46,7 +51,7 @@
                                 <path d="M1 1L13 0.999999" stroke-width="2" stroke-linecap="round"/>
                                 </svg>            
                             </a>
-    <input class="number__text" type="text" id="count" name="count" value="1" required>
+    <input class="number__text" type="text" id="count" name="count" value="1м²" required>
     <a href="#" class="number__plus">
         <svg class="svg-plus" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M8 2V14" stroke-width="2" stroke-linecap="round"/>

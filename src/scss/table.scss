@@ -20,6 +20,12 @@
         background: rgba(0, 102, 204, 0.1);
         border-radius: 4px;
     
+        &-active {
+            transition: .4s;
+            color: #fff;
+            background: rgba(0, 102, 204);
+        }
+        
         &:hover {
             transition: .4s;
             color: #fff;
