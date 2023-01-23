@@ -83,7 +83,7 @@ $('.checkbox input').focusout(function(){
 $('.table__button').on('click', function(e) {
   e.preventDefault();
   let text = $(this).text();
-  $(this).toggleClass('table__button-active');
+  $(this).toggleClass('table__button_active');
   $(this).text(text == "В корзину" ? "В корзине" : "В корзину");
 });
 

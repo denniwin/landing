@@ -6,7 +6,7 @@ const {
 const uglify = require('gulp-uglify-es').default;
 const concat = require('gulp-concat');
 const map = require('gulp-sourcemaps');
-const chalk = require('chalk');
+const chalk = require("chalk");
 
 module.exports = function libs_js(done) {
 	if (plugins.length > 0)

@@ -1,5 +1,5 @@
 const fs = require('fs');
-const chalk = require('chalk');
+const chalk = require("chalk");
 
 let srcFonts = 'src/scss/_local-fonts.scss';
 let appFonts = 'build/fonts/';
